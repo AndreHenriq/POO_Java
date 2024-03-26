@@ -3,15 +3,8 @@ package Ex_Aula_162.Entities;
 public class ImportedProducts extends Product {
     private double customFee;
 
-    public ImportedProducts() {
-    }
-
     public ImportedProducts(String name, double price, double customFee) {
         super(name, price);
-        this.customFee = customFee;
-    }
-
-    public ImportedProducts(double customFee) {
         this.customFee = customFee;
     }
 
@@ -27,7 +20,7 @@ public class ImportedProducts extends Product {
     public String priceTag() {
         return getName()
                 + "$"
-                + String.format("%2.f", totalPrice())
+                + String.format("%.2f", totalPrice())
                 +" custom fee: $"
                 +String.format("%.2f", customFee)
                 +")";
